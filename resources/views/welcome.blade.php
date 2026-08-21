@@ -360,139 +360,142 @@
         </div>
     </section>
 
-    <!-- 5. South Gate Contact Section -->
-    <section id="contact" class="py-24 relative bg-cover bg-center bg-fixed border-t border-slate-700" style="background-image: url('https://angkorwatadventures.com/wp-content/uploads/2025/02/What-Is-the-South-Gates-Significance-at-Angkor-Thom.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950"></div>
+    <!-- 5 & 6. Unified Contact and Footer Section -->
+    <div class="relative bg-cover bg-center bg-fixed border-t border-slate-700" style="background-image: url('https://angkorwatadventures.com/wp-content/uploads/2025/02/What-Is-the-South-Gates-Significance-at-Angkor-Thom.jpg');">
 
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16 drop-shadow-xl">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Open the Gates</h2>
-                <p class="text-lg text-slate-200 max-w-2xl mx-auto font-medium">Like the welcoming South Gate of Angkor Thom, I'm always open to new opportunities.</p>
+        <!-- Unified Dark Overlay (Fades from completely dark at top to slightly transparent at the bottom) -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/70 to-slate-950/90"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 relative z-10">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-16 drop-shadow-xl">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Open the Gates</h2>
+                    <p class="text-lg text-slate-200 max-w-2xl mx-auto font-medium">Like the welcoming South Gate of Angkor Thom, I'm always open to new opportunities.</p>
+                </div>
+
+                <div class="bg-slate-900/85 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-2xl border border-slate-700">
+
+                    @if(session('success'))
+                        <div class="mb-6 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-emerald-400 font-medium text-center">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    <form action="{{ route('contact.send') }}" method="POST" class="space-y-6">
+                        @csrf
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">First Name</label>
+                                <input type="text" name="first_name" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition" placeholder="Mony Pich">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">Last Name</label>
+                                <input type="text" name="last_name" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition" placeholder="San">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition" placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">Who are you?</label>
+                                <select name="role" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 focus:border-indigo-500 outline-none transition">
+                                    <option value="" disabled selected>Select an option...</option>
+                                    <option value="recruiter">Recruiter</option>
+                                    <option value="company">Company</option>
+                                    <option value="student">Fellow Student</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-2">Message</label>
+                            <textarea name="message" required rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition resize-none" placeholder="Let's build something great together..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg shadow-lg transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
+        </section>
 
-            <div class="bg-slate-900/85 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-2xl border border-slate-700">
+        <!-- Footer Section (Transparent background to let the image show through) -->
+        <footer class="border-t border-slate-800/60 py-16 relative z-10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
-                <!-- Success Message Display -->
-                @if(session('success'))
-                    <div class="mb-6 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-emerald-400 font-medium text-center">
-                        {{ session('success') }}
-                    </div>
-                @endif
-
-                <form action="{{ route('contact.send') }}" method="POST" class="space-y-6">
-                    @csrf <!-- Laravel Security Token -->
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-300 mb-2">First Name</label>
-                            <input type="text" name="first_name" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition" placeholder="Mony Pich">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-300 mb-2">Last Name</label>
-                            <input type="text" name="last_name" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition" placeholder="San">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-300 mb-2">Email Address</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition" placeholder="your@email.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-slate-300 mb-2">Who are you?</label>
-                            <select name="role" required class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 focus:border-indigo-500 outline-none transition">
-                                <option value="" disabled selected>Select an option...</option>
-                                <option value="recruiter">Recruiter</option>
-                                <option value="company">Company</option>
-                                <option value="student">Fellow Student</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
+                    <!-- Brand & Location -->
                     <div>
-                        <label class="block text-sm font-semibold text-slate-300 mb-2">Message</label>
-                        <textarea name="message" required rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-800/80 border border-slate-600 text-slate-100 placeholder-slate-500 focus:border-indigo-500 outline-none transition resize-none" placeholder="Let's build something great together..."></textarea>
-                    </div>
+                        <a href="#home" class="flex items-center gap-3 group mb-6 w-fit">
+                            <div class="flex items-center justify-center w-8 h-8 rounded bg-indigo-600 text-white font-bold text-lg group-hover:bg-indigo-500 transition-colors shadow-lg">
+                                P
+                            </div>
+                            <span class="font-bold text-xl tracking-wide text-slate-100 group-hover:text-indigo-400 transition-colors">MonyPich</span>
+                        </a>
 
-                    <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg shadow-lg transition-all">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Footer Section -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-16 relative z-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-
-                <!-- Brand & Location -->
-                <div>
-                    <!-- NEW BRAND LOGO -->
-                    <a href="#home" class="flex items-center gap-3 group mb-6 w-fit">
-                        <div class="flex items-center justify-center w-8 h-8 rounded bg-indigo-600 text-white font-bold text-lg group-hover:bg-indigo-500 transition-colors shadow-lg">
-                            P
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            A software engineer passionate about clean code, robust backend architecture, and building modern digital solutions.
+                        </p>
+                        <div class="inline-flex items-center gap-2 px-3 py-2 bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg text-slate-300 text-sm font-medium shadow-sm">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg" alt="Cambodia Flag" class="w-5 h-3.5 object-cover rounded-[2px] shadow-sm">
+                            Proudly based in the Kingdom of Cambodia
                         </div>
-                        <span class="font-bold text-xl tracking-wide text-slate-100 group-hover:text-indigo-400 transition-colors">MonyPich</span>
-                    </a>
+                    </div>
 
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        A software engineer passionate about clean code, robust backend architecture, and building modern digital solutions.
-                    </p>
-                    <div class="inline-flex items-center gap-2 px-3 py-2 bg-slate-900 border border-slate-700/50 rounded-lg text-slate-300 text-sm font-medium shadow-sm">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg" alt="Cambodia Flag" class="w-5 h-3.5 object-cover rounded-[2px] shadow-sm">
-                        Proudly based in the Kingdom of Cambodia
+                    <!-- Contact Details -->
+                    <div>
+                        <h3 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Details</h3>
+                        <ul class="space-y-4 text-slate-400 text-sm">
+                            <li class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                <a href="mailto:pich.devkh@gmail.com" class="hover:text-indigo-400 transition">pich.devkh@gmail.com</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.62-.2-1.12-.31-1.1-.66.01-.18.27-.36.78-.55 3.05-1.33 5.09-2.21 6.12-2.64 2.91-1.22 3.51-1.43 3.91-1.44.09 0 .28.02.4.11.1.08.13.19.14.3z"/></svg>
+                                <a href="https://t.me/Sanmonypich" target="_blank" class="hover:text-indigo-400 transition">@Sanmonypich on Telegram</a>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <span>090 383 598 (Metfone)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <span>092 383 598 (Cellcard)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h3 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Social Profiles</h3>
+                        <div class="flex flex-col space-y-4">
+                            <a href="https://github.com/SeverovX" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-indigo-400 transition text-sm">
+                                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                                GitHub Profile
+                            </a>
+                            <a href="https://www.facebook.com/Mony.Pich.KH/" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-indigo-400 transition text-sm">
+                                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
+                                Facebook
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Contact Details -->
-                <div>
-                    <h3 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Details</h3>
-                    <ul class="space-y-4 text-slate-400 text-sm">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            <a href="mailto:pich.devkh@gmail.com" class="hover:text-indigo-400 transition">pich.devkh@gmail.com</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.62-.2-1.12-.31-1.1-.66.01-.18.27-.36.78-.55 3.05-1.33 5.09-2.21 6.12-2.64 2.91-1.22 3.51-1.43 3.91-1.44.09 0 .28.02.4.11.1.08.13.19.14.3z"/></svg>
-                            <a href="https://t.me/Sanmonypich" target="_blank" class="hover:text-indigo-400 transition">Telegram</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            <span>090 383 598 (Metfone)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            <span>092 383 598 (Cellcard)</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Social Links -->
-                <div>
-                    <h3 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Social Profiles</h3>
-                    <div class="flex flex-col space-y-4">
-                        <a href="https://github.com/SeverovX" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-indigo-400 transition text-sm">
-                            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
-                            GitHub Profile
-                        </a>
-                        <a href="https://www.facebook.com/Mony.Pich.KH/" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-indigo-400 transition text-sm">
-                            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
-                            Facebook
-                        </a>
-                    </div>
+                <!-- Copyright Box -->
+                <div class="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                    <p>&copy; 2026 San MonyPich. All rights reserved.</p>
+                    <p>Designed with <span class="text-indigo-500">&hearts;</span> in Phnom Penh</p>
                 </div>
             </div>
-
-            <!-- Copyright Box -->
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-                <p>&copy; 2026 San MonyPich. All rights reserved.</p>
-                <p>Designed with <span class="text-indigo-500">&hearts;</span> in Phnom Penh</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div> <!-- End of Unified Background Wrapper -->
 
     <!-- Mobile Menu Script -->
     <script>
