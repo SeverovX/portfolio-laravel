@@ -586,8 +586,50 @@
         </footer>
     </div>
 
+    <!-- Floating Spotify-Style Audio Player -->
+    <div class="fixed z-40 bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[320px] md:bottom-6 md:left-auto md:-translate-x-0 md:right-6 md:w-80 bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-2xl rounded-xl p-3 flex flex-col gap-2 group transition-all">
+
+        <!-- Hidden Audio Element -->
+        <audio id="bg-music" loop preload="metadata">
+            <source src="{{ asset('music/background.mp3') }}" type="audio/mpeg">
+        </audio>
+
+        <div class="flex items-center gap-3">
+            <!-- Album Art -->
+            <div class="w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-slate-800 border border-slate-700 shadow-inner">
+                <!-- You can change this image URL later to whatever album cover you want! -->
+                <img id="album-art" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=200" alt="Album Art" class="w-full h-full object-cover transition-transform duration-700">
+            </div>
+
+            <!-- Track Info -->
+            <div class="flex-grow min-w-0">
+                <h4 class="text-slate-100 text-sm font-bold truncate">My Custom Track</h4>
+                <p class="text-slate-400 text-xs truncate">Now Playing</p>
+            </div>
+
+            <!-- Play/Pause Button -->
+            <button id="play-pause-btn" class="w-9 h-9 flex items-center justify-center rounded-full bg-indigo-500 hover:bg-indigo-400 hover:scale-105 text-white transition-all shadow-md focus:outline-none flex-shrink-0">
+                <!-- Play Icon -->
+                <svg id="play-icon" class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <!-- Pause Icon -->
+                <svg id="pause-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full flex items-center gap-2 mt-1">
+            <span id="current-time" class="text-[10px] text-slate-500 font-medium tabular-nums w-8 text-right">0:00</span>
+            <div class="relative flex-grow h-1.5 bg-slate-800 rounded-full overflow-hidden cursor-pointer" id="progress-container">
+                <div id="progress-bar" class="absolute top-0 left-0 h-full bg-indigo-500 w-0 pointer-events-none transition-all duration-75"></div>
+            </div>
+            <span id="total-time" class="text-[10px] text-slate-500 font-medium tabular-nums w-8">0:00</span>
+        </div>
+    </div>
+
     <!-- Mobile Menu Script -->
     <script>
+
+
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const links = document.querySelectorAll('.mobile-link');
@@ -601,6 +643,66 @@
                 menu.classList.add('hidden');
             });
         });
+
+        // Floating Audio Player Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('bg-music');
+            const playBtn = document.getElementById('play-pause-btn');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+            const progressBar = document.getElementById('progress-bar');
+            const progressContainer = document.getElementById('progress-container');
+            const currentTimeEl = document.getElementById('current-time');
+            const totalTimeEl = document.getElementById('total-time');
+            const albumArt = document.getElementById('album-art');
+
+            let isPlaying = false;
+
+            // Format time (seconds to m:ss)
+            const formatTime = (time) => {
+                if (isNaN(time)) return "0:00";
+                const minutes = Math.floor(time / 60);
+                const seconds = Math.floor(time % 60);
+                return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            };
+
+            // Load metadata to get total song duration
+            audio.addEventListener('loadedmetadata', () => {
+                totalTimeEl.textContent = formatTime(audio.duration);
+            });
+
+            // Play/Pause toggle
+            playBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    audio.pause();
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                    albumArt.classList.remove('scale-110'); // Remove zoom effect
+                } else {
+                    audio.play();
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                    albumArt.classList.add('scale-110'); // Add cool zoom effect when playing
+                }
+                isPlaying = !isPlaying;
+            });
+
+            // Update progress bar as song plays
+            audio.addEventListener('timeupdate', () => {
+                const progressPercent = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = `${progressPercent}%`;
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            });
+
+            // Click on the bar to skip/seek through the song
+            progressContainer.addEventListener('click', (e) => {
+                const width = progressContainer.clientWidth;
+                const clickX = e.offsetX;
+                const duration = audio.duration;
+                audio.currentTime = (clickX / width) * duration;
+            });
+        });
+
     </script>
 
 </body>
