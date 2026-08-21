@@ -9,31 +9,60 @@
 <body class="bg-slate-900 text-slate-200 font-sans antialiased">
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md text-slate-100 border-b border-slate-800">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-900/90 backdrop-blur-md text-slate-100 border-b border-slate-800 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="font-bold text-xl tracking-wide text-indigo-500">PORTFOLIO</a>
+
+            <!-- NEW BRAND LOGO -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="flex items-center justify-center w-9 h-9 rounded-lg bg-indigo-600 text-white font-bold text-xl group-hover:bg-indigo-500 transition-all duration-300 shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 group-hover:-translate-y-0.5">
+                    P
+                </div>
+                <span class="font-bold text-xl tracking-wide text-slate-100 group-hover:text-indigo-400 transition-colors duration-300">MonyPich</span>
+            </a>
 
             <!-- Desktop Menu (Hidden on Mobile) -->
-            <div class="hidden md:flex items-center space-x-6 font-medium text-sm">
-                <div class="flex space-x-6">
-                    <a href="#about" class="hover:text-indigo-400 transition">About</a>
-                    <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
-                    <a href="#education" class="hover:text-indigo-400 transition">Education</a>
-                    <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
-                    <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <!-- Polished Page Links -->
+                <div class="flex space-x-8">
+                    <a href="#about" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
+                        <span>About</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a>
+                    <a href="#projects" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
+                        <span>Projects</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a>
+                    <a href="#education" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
+                        <span>Education</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a>
+                    <a href="#experience" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
+                        <span>Experience</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a>
+                    <a href="#contact" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
+                        <span>Contact</span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a>
                 </div>
 
+                <!-- Divider -->
                 <div class="h-6 w-px bg-slate-700"></div>
 
-                <div class="flex space-x-4 items-center">
-                    <a href="https://github.com/SeverovX" target="_blank" class="text-slate-400 hover:text-indigo-400 transition" title="GitHub">
+                <!-- Desktop Social Icons -->
+                <div class="flex space-x-5 items-center">
+                    <a href="https://github.com/SeverovX" target="_blank" class="text-slate-400 hover:text-indigo-400 hover:scale-110 transition-all duration-300" title="GitHub">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
                     </a>
-                    <a href="https://www.facebook.com/Mony.Pich.KH/" target="_blank" class="text-slate-400 hover:text-indigo-400 transition" title="Facebook">
+                    <a href="https://www.facebook.com/Mony.Pich.KH/" target="_blank" class="text-slate-400 hover:text-indigo-400 hover:scale-110 transition-all duration-300" title="Facebook">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
                     </a>
-                    <a href="mailto:pich.devkh@gmail.com" class="text-slate-400 hover:text-indigo-400 transition" title="Email Me">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <!-- NEW: Telegram Link -->
+                    <a href="https://t.me/@Sanmonypich" target="_blank" class="text-slate-400 hover:text-indigo-400 hover:scale-110 transition-all duration-300" title="Telegram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.62-.2-1.12-.31-1.1-.66.01-.18.27-.36.78-.55 3.05-1.33 5.09-2.21 6.12-2.64 2.91-1.22 3.51-1.43 3.91-1.44.09 0 .28.02.4.11.1.08.13.19.14.3z"/></svg>
+                    </a>
+                    <a href="mailto:pich.devkh@gmail.com" class="text-slate-400 hover:text-indigo-400 hover:scale-110 transition-all duration-300" title="Email Me">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     </a>
                 </div>
             </div>
@@ -46,14 +75,25 @@
             </button>
         </div>
 
-        <!-- Mobile Dropdown Menu (Hidden by Default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 shadow-xl">
+        <!-- Mobile Dropdown Menu (With Socials) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 shadow-xl overflow-hidden">
             <div class="px-6 py-4 flex flex-col space-y-4">
-                <a href="#about" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400">About</a>
-                <a href="#projects" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400">Projects</a>
-                <a href="#education" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400">Education</a>
-                <a href="#experience" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400">Experience</a>
-                <a href="#contact" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400">Contact</a>
+                <a href="#about" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">About</a>
+                <a href="#projects" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#education" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Education</a>
+                <a href="#experience" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Experience</a>
+                <a href="#contact" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Contact</a>
+
+                <!-- Divider -->
+                <div class="h-px w-full bg-slate-700/50 my-2"></div>
+
+                <!-- Mobile Social Grid -->
+                <div class="flex items-center justify-around py-3">
+                    <a href="https://github.com/SeverovX" target="_blank" class="text-slate-400 hover:text-indigo-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg></a>
+                    <a href="https://www.facebook.com/Mony.Pich.KH/" target="_blank" class="text-slate-400 hover:text-indigo-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg></a>
+                    <a href="https://t.me/@Sanmonypich" target="_blank" class="text-slate-400 hover:text-indigo-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.62-.2-1.12-.31-1.1-.66.01-.18.27-.36.78-.55 3.05-1.33 5.09-2.21 6.12-2.64 2.91-1.22 3.51-1.43 3.91-1.44.09 0 .28.02.4.11.1.08.13.19.14.3z"/></svg></a>
+                    <a href="mailto:pich.devkh@gmail.com" class="text-slate-400 hover:text-indigo-400 transition"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+                </div>
             </div>
         </div>
     </nav>
@@ -383,14 +423,16 @@
         </div>
     </section>
 
-    <!-- 6. Footer Section -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-16 relative z-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-
-                <!-- Brand & Location -->
+    <!-- Brand & Location -->
                 <div>
-                    <a href="#" class="font-bold text-2xl tracking-wide text-indigo-500 mb-4 block">PORTFOLIO</a>
+                    <!-- NEW BRAND LOGO -->
+                    <a href="#home" class="flex items-center gap-3 group mb-6 w-fit">
+                        <div class="flex items-center justify-center w-8 h-8 rounded bg-indigo-600 text-white font-bold text-lg group-hover:bg-indigo-500 transition-colors shadow-lg">
+                            P
+                        </div>
+                        <span class="font-bold text-xl tracking-wide text-slate-100 group-hover:text-indigo-400 transition-colors">MonyPich</span>
+                    </a>
+
                     <p class="text-slate-400 text-sm leading-relaxed mb-6">
                         A software engineer passionate about clean code, robust backend architecture, and building modern digital solutions.
                     </p>
@@ -409,12 +451,12 @@
                             <a href="mailto:pich.devkh@gmail.com" class="hover:text-indigo-400 transition">pich.devkh@gmail.com</a>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            <span>090 383 598 (Metfone)</span>
+                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.62-.2-1.12-.31-1.1-.66.01-.18.27-.36.78-.55 3.05-1.33 5.09-2.21 6.12-2.64 2.91-1.22 3.51-1.43 3.91-1.44.09 0 .28.02.4.11.1.08.13.19.14.3z"/></svg>
+                            <a href="https://t.me/@Sanmonypich" target="_blank" class="hover:text-indigo-400 transition">@Sanmonypich on Telegram</a>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                            <span>093 383 598 (Cellcard)</span>
+                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <span>090 383 598 (Metfone)</span>
                         </li>
                     </ul>
                 </div>
