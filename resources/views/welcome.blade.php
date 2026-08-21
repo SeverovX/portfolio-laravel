@@ -423,7 +423,12 @@
         </div>
     </section>
 
-    <!-- Brand & Location -->
+    <!-- 6. Footer Section -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-16 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+                <!-- Brand & Location -->
                 <div>
                     <!-- NEW BRAND LOGO -->
                     <a href="#home" class="flex items-center gap-3 group mb-6 w-fit">
