@@ -532,10 +532,10 @@
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
                             A software engineer passionate about clean code, robust backend architecture, and building modern digital solutions.
                         </p>
-                        <div class="inline-flex items-center gap-2 px-3 py-2 bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg text-slate-300 text-sm font-medium shadow-sm">
+                        <a href="https://maps.app.goo.gl/DjiYWkgQHfrKa5Gc9?g_st=ac" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 bg-slate-900 border border-slate-700/50 rounded-lg text-slate-300 text-sm font-medium shadow-sm hover:bg-slate-800 hover:border-slate-500 hover:text-indigo-400 transition-all">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg" alt="Cambodia Flag" class="w-5 h-3.5 object-cover rounded-[2px] shadow-sm">
                             Proudly based in the Kingdom of Cambodia
-                        </div>
+                        </a>
                     </div>
 
                     <!-- Contact Details -->
