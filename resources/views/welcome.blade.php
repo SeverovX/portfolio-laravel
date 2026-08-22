@@ -414,12 +414,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 5: Kla Klouk Game -->
                 <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col hover:border-indigo-500/50">
                     <div class="h-48 bg-slate-950 relative overflow-hidden border-b border-slate-700">
                         <!-- Game Image -->
-                        <img src="{{ asset('images/kla-klouk.jpg') }}" alt="Kla Klouk Game" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/kla-klouk.png') }}" alt="Kla Klouk Game" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Desktop Game</span>
