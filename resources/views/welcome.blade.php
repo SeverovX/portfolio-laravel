@@ -598,12 +598,12 @@
             <!-- Album Art -->
             <div class="w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-slate-800 border border-slate-700 shadow-inner">
                 <!-- You can change this image URL later to whatever album cover you want! -->
-                <img id="album-art" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=200" alt="Album Art" class="w-full h-full object-cover transition-transform duration-700">
+                <img id="album-art" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e6/9f/9b/e69f9b04-b749-da22-13cd-24c76d210d94/4550706790447_cover.png/600x600cc.webp" alt="Album Art" class="w-full h-full object-cover transition-transform duration-700">
             </div>
 
             <!-- Track Info -->
             <div class="flex-grow min-w-0">
-                <h4 class="text-slate-100 text-sm font-bold truncate">My Custom Track</h4>
+                <h4 class="text-slate-100 text-sm font-bold truncate">First Song by Roga.</h4>
                 <p class="text-slate-400 text-xs truncate">Now Playing</p>
             </div>
 
