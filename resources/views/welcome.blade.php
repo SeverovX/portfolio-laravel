@@ -25,7 +25,7 @@
                 <!-- Polished Page Links -->
                 <div class="flex space-x-8">
                     <a href="#about" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
-                        <span>About</span>
+                        <span>Skills</span>
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a>
                     <a href="#projects" class="relative group py-1 text-slate-300 hover:text-indigo-400 transition-colors duration-300">
@@ -77,7 +77,7 @@
         <!-- Mobile Dropdown Menu (With Socials) -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 shadow-xl overflow-hidden">
             <div class="px-6 py-4 flex flex-col space-y-4">
-                <a href="#about" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">About</a>
+                <a href="#about" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Skills</a>
                 <a href="#projects" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Projects</a>
                 <a href="#education" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Education</a>
                 <a href="#experience" class="mobile-link text-lg font-medium text-slate-300 hover:text-indigo-400 transition-colors">Experience</a>
@@ -97,83 +97,84 @@
         </div>
     </nav>
 
-    <!-- 1. Angkor Wat Hero Section -->
+    <!-- 1. Hero Section (Updated as Personal Bio) -->
     <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-fixed" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ankor_Wat_temple.jpg/1920px-Ankor_Wat_temple.jpg');">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-950/50 to-slate-950/20"></div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-slate-100 mt-16 drop-shadow-2xl">
-            <span class="inline-block px-4 py-1.5 bg-indigo-500/30 text-white border border-indigo-500/50 rounded-full text-xs font-semibold tracking-wider uppercase mb-4 backdrop-blur-md shadow-lg">
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-slate-100 mt-16 drop-shadow-2xl">
+            <span class="inline-block px-4 py-1.5 bg-indigo-500/30 text-white border border-indigo-500/50 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-md shadow-lg">
                 Software Engineer
             </span>
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white drop-shadow-xl">
-                Building Strong Foundations <br>
-                <span class="text-indigo-400">Inspired by Timeless Architecture</span>
+                Hi, I'm San MonyPich <br>
+                <span class="text-indigo-400 text-3xl md:text-5xl block mt-3">Software Engineering Student & Tech Enthusiast</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-100 max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-md font-medium">
-                Welcome! I'm Mony Pich, a developer specializing in backend logic, client-server architecture, and solving complex problems with modern tech.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#about" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg shadow-lg transition">Discover My Journey</a>
+            <div class="max-w-3xl mx-auto space-y-6 text-base md:text-lg text-slate-200 leading-relaxed font-medium">
+                <p>
+                    I am a 3rd-year student at BELTEI International University. Honest, hardworking, and deeply curious, I have a passion for learning how things work from the ground up—whether it's writing clean backend code or understanding the bare metal of PC hardware.
+                </p>
+                <p>
+                    I might look a bit serious at first glance, but I’m an highly approachable guy who always appreciates a good joke. When I'm not coding, you can usually find me gaming, riding my motorbike, or diving into tech research. I love staying ahead of the curve on industry shifts—from the latest CPU/GPU hardware drops to AI integrations in Android and Apple. If I'm unplugged from tech, I'm probably catching up on the latest football match or esports tournament.
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-4 mt-10">
+                <a href="#about" class="px-8 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg shadow-xl transition hover:-translate-y-1">Explore My Skills</a>
             </div>
         </div>
     </section>
 
-    <!-- 1.5 About Me & Tech Stack -->
+    <!-- 1.5 Skills & Tech Stack (Updated Content) -->
     <section id="about" class="py-24 relative bg-cover bg-center bg-fixed border-t border-slate-800" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/20/03_Prasat_Preah_Vihear-nX-06513.jpg');">
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/85 to-slate-950"></div>
 
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <!-- Text Story Side -->
+                <!-- Text Story Side (Now Expertise Focus) -->
                 <div class="drop-shadow-xl">
-                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Who I Am</h2>
-                    <p class="text-slate-200 text-lg leading-relaxed mb-8 font-medium">
-                        Hello! I'm <span class="text-indigo-400 font-bold">Mony Pich San</span> (traditionally written as <span class="text-indigo-400 font-bold">San MonyPich</span> in Khmer), a 3rd-year Software Engineering student at BELTEI International University.
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">My Expertise</h2>
+                    <p class="text-slate-200 text-lg leading-relaxed mb-10 font-medium border-l-4 border-indigo-500 pl-4">
+                        I bridge the gap between physical hardware and functional software, building systems that are robust, secure, and built to scale.
                     </p>
 
-                    <div class="space-y-6 mb-8">
+                    <div class="space-y-8 mb-10">
                         <div>
                             <h4 class="text-indigo-400 font-bold text-lg mb-2 flex items-center gap-2">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-                                The Tech & Hardware Guy
+                                Programming & Web
                             </h4>
                             <p class="text-slate-300 leading-relaxed text-sm md:text-base">
-                                My journey started with physical hardware. Fluent in diagnosing PCs and understanding how CPUs and GPUs communicate, I bring a unique, bottom-up perspective to software. From configuring networks and virtual machines to building REST APIs in Laravel and C# client-server apps, I love making complex systems talk.
+                                From building robust backend web architectures to developing secure desktop client-server applications, I utilize my core programming languages across featured production applications and various smaller unlisted experiments.
                             </p>
                         </div>
 
                         <div>
                             <h4 class="text-indigo-400 font-bold text-lg mb-2 flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                                The Team Leader
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                                Databases & Servers
                             </h4>
                             <p class="text-slate-300 leading-relaxed text-sm md:text-base">
-                                Beyond the screen, I have a strong track record of leading university project teams. I excel at analyzing a project, breaking it down, and delegating tasks based on each member's specific strengths. I am highly supportive of my teammates, but when the deadline approaches, I switch into serious mode to ensure we cross the finish line successfully.
+                                Highly experienced in designing relational databases and managing secure data flow. I have successfully built backends for hardware inventory systems, comprehensive HR directories, and smart QR attendance trackers.
                             </p>
                         </div>
 
                         <div>
                             <h4 class="text-indigo-400 font-bold text-lg mb-2 flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                Beyond the Code
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                                Hardware, IT & Leadership
                             </h4>
                             <p class="text-slate-300 leading-relaxed text-sm md:text-base">
-                                I might look a bit serious or introverted at first glance, but don't judge a book by its cover! Once you get to know me, I'm highly approachable and love a good laugh (I appreciate all humor, from lighthearted to dark and sarcastic). I'm usually the one sparking conversations about the latest tech trends, gaming news, or recent football matches.
+                                My software skills are backed by physical hardware knowledge. I am fluent in PC diagnostics, knowing exactly how NVIDIA/AMD graphics and Intel/AMD processors interact. Beyond the technical, I act as a <span class="text-indigo-400 font-bold">Collaborative Organizer</span> in team projects—breaking down requirements and helping everyone cross the finish line together.
                             </p>
                         </div>
                     </div>
-
-                    <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white font-medium transition shadow-xl">
-                        Let's Work Together
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
                 </div>
 
                 <!-- NEW: Modern UI Badge Grid (Mobile Friendly) -->
                 <div class="bg-slate-900/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-2xl h-fit">
                     <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                         Technical Arsenal
                     </h3>
 
@@ -252,7 +253,7 @@
                             </div>
                         </div>
 
-                        <!-- Languages -->
+                        <!-- Languages & Soft Skills -->
                         <div>
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Languages & Soft Skills</h4>
                             <div class="flex flex-wrap gap-3">
@@ -264,11 +265,27 @@
                                     <img src="https://flagcdn.com/gb.svg" class="w-5 h-auto rounded-[2px]" alt="English">
                                     <span class="text-xs md:text-sm font-semibold text-slate-200">English (Proficient)</span>
                                 </div>
+
+                                <!-- New Soft Skills Badges -->
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Collaborative Organizer</span>
+                                </div>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Analytical Troubleshooting</span>
+                                </div>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Continuous Learner</span>
+                                </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
 
     <!-- 2. Ta Prohm Projects Section -->
@@ -573,11 +590,11 @@
                             </li>
                             <li class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                                <span>090 383 598 (Metfone)</span>
+                                <a href="tel:090383598" class="hover:text-indigo-400 transition">090 383 598 (Metfone)</a>
                             </li>
                             <li class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                                <span>092 383 598 (Cellcard)</span>
+                                <a href="tel:092383598" class="hover:text-indigo-400 transition">092 383 598 (Cellcard)</a>
                             </li>
                         </ul>
                     </div>
