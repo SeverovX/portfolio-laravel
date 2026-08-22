@@ -330,18 +330,23 @@
                 <p class="text-lg text-slate-200 max-w-2xl mx-auto font-medium">Built from the ground up, much like the intricate root structures of Ta Prohm.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- UPDATED 4 PROJECTS GRID WITH REAL IMAGES -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <!-- Project 1: PC Parts System -->
-                <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col">
-                    <div class="h-48 bg-slate-950 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=600" alt="PC Hardware" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                <!-- Project 1: PC Parts Inventory System -->
+                <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col hover:border-indigo-500/50">
+                    <div class="h-48 bg-slate-950 relative overflow-hidden border-b border-slate-700">
+                        <img src="{{ asset('images/pc-parts.jpg') }}" alt="PC Hardware Dashboard" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
-                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Desktop Application</span>
+                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Desktop App</span>
                         <h3 class="text-xl font-bold text-slate-100 mb-2">PC Parts Inventory System</h3>
-                        <p class="text-slate-400 text-sm mb-4 flex-grow">A client-server application built with C# Windows Forms and SQL Server. Designed to manage computer hardware inventories across remote IP connections.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A robust Windows Forms application designed to track, manage, and inventory computer hardware components efficiently.</p>
+                        <a href="https://github.com/SeverovX/pc-parts-inventory-csharp" target="_blank" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 text-sm font-bold mb-4 transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                            View on GitHub
+                        </a>
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">C#</span>
                             <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">WinForms</span>
                             <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">SQL Server</span>
@@ -349,18 +354,62 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Laravel API -->
-                <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col">
-                    <div class="h-48 bg-slate-950 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600" alt="Code" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                <!-- Project 2: C# Client System -->
+                <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col hover:border-indigo-500/50">
+                    <div class="h-48 bg-slate-950 relative overflow-hidden border-b border-slate-700">
+                        <img src="{{ asset('images/client-system.png') }}" alt="Client Management System" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Desktop App</span>
+                        <h3 class="text-xl font-bold text-slate-100 mb-2">Client Management System</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A client-server architecture application built for secure data handling and remote client management operations.</p>
+                        <a href="https://github.com/SeverovX/csharp-client-system" target="_blank" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 text-sm font-bold mb-4 transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                            View on GitHub
+                        </a>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">C#</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">WinForms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Laravel Attendance System -->
+                <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col hover:border-indigo-500/50">
+                    <div class="h-48 bg-slate-950 relative overflow-hidden border-b border-slate-700">
+                        <img src="{{ asset('images/attendance.jpg') }}" alt="Attendance QR Dashboard" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Web Application</span>
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">School System API</h3>
-                        <p class="text-slate-400 text-sm mb-4 flex-grow">A RESTful backend service built with Laravel and MySQL. Handles student records, grades, and teacher assignments securely.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
+                        <h3 class="text-xl font-bold text-slate-100 mb-2">Smart Attendance System</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A full-stack Laravel application featuring secure Admin and User roles for tracking daily scan-in and scan-out records via QR.</p>
+                        <a href="https://github.com/SeverovX/laravel-attendance-system" target="_blank" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 text-sm font-bold mb-4 transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                            View on GitHub
+                        </a>
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">Laravel</span>
                             <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">PHP</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Laravel Employee Info -->
+                <div class="bg-slate-900/90 backdrop-blur-md rounded-xl overflow-hidden shadow-xl transition-shadow border border-slate-700 flex flex-col hover:border-indigo-500/50">
+                    <div class="h-48 bg-slate-950 relative overflow-hidden border-b border-slate-700">
+                        <img src="{{ asset('images/employee-info.jpg') }}" alt="Employee Management List" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Web Application</span>
+                        <h3 class="text-xl font-bold text-slate-100 mb-2">Employee Info Directory</h3>
+                        <p class="text-slate-400 text-sm mb-4 flex-grow">A centralized database management system for HR, handling employee records, departments, and dynamic data filtering.</p>
+                        <a href="https://github.com/SeverovX/laravel-employee-directory" target="_blank" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 text-sm font-bold mb-4 transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                            View on GitHub
+                        </a>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">Laravel</span>
                             <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700">MySQL</span>
                         </div>
                     </div>
@@ -628,8 +677,6 @@
 
     <!-- Mobile Menu Script -->
     <script>
-
-
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const links = document.querySelectorAll('.mobile-link');
