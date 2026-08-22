@@ -170,8 +170,8 @@
                     </a>
                 </div>
 
-                <!-- NEW: Interactive Tech Stack Grid -->
-                <div class="bg-slate-900/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                <!-- NEW: Modern UI Badge Grid (Mobile Friendly) -->
+                <div class="bg-slate-900/80 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-2xl h-fit">
                     <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
                         <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                         Technical Arsenal
@@ -182,48 +182,30 @@
                         <!-- Programming & Web -->
                         <div>
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Programming & Web</h4>
-                            <div class="flex flex-wrap gap-4">
-                                <!-- C# -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" class="w-8 h-8 object-contain" alt="C#">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        C# (.NET/WinForms)
-                                    </span>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" class="w-5 h-5 object-contain" alt="C#">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">C# (.NET/WinForms)</span>
                                 </div>
-                                <!-- C++ -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="w-8 h-8 object-contain" alt="C++">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        C++
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="w-5 h-5 object-contain" alt="C++">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">C++</span>
                                 </div>
-                                <!-- Java -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="w-8 h-8 object-contain" alt="Java">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        Java
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="w-5 h-5 object-contain" alt="Java">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Java</span>
                                 </div>
-                                <!-- PHP -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="w-8 h-8 object-contain" alt="PHP">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        PHP
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="w-5 h-5 object-contain" alt="PHP">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">PHP</span>
                                 </div>
-                                <!-- Laravel -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="w-8 h-8 object-contain" alt="Laravel">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        Laravel
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="w-5 h-5 object-contain" alt="Laravel">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Laravel</span>
                                 </div>
-                                <!-- React -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-8 h-8 object-contain" alt="React">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        React (Basics)
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-5 h-5 object-contain" alt="React">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">React (Basics)</span>
                                 </div>
                             </div>
                         </div>
@@ -231,28 +213,18 @@
                         <!-- Databases & Servers -->
                         <div>
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Databases & Servers</h4>
-                            <div class="flex flex-wrap gap-4">
-                                <!-- SQL Server -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <!-- Using Heroicon for clean Server UI -->
-                                    <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        SQL Server
-                                    </span>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">SQL Server</span>
                                 </div>
-                                <!-- MySQL -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="w-8 h-8 object-contain" alt="MySQL">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        MySQL
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="w-5 h-5 object-contain" alt="MySQL">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">MySQL</span>
                                 </div>
-                                <!-- XAMPP -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        XAMPP / WAMP
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">XAMPP / WAMP</span>
                                 </div>
                             </div>
                         </div>
@@ -260,34 +232,22 @@
                         <!-- IT, Hardware & Networking -->
                         <div>
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">IT, Hardware & Networking</h4>
-                            <div class="flex flex-wrap gap-4">
-                                <!-- PC Hardware Diagnostics -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        PC Hardware Diagnostics
-                                    </span>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Hardware Diagnostics</span>
                                 </div>
-                                <!-- Virtual Machines -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2v-2a2 2 0 00-2-2H5zM5 19a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2v-2a2 2 0 00-2-2H5z"/></svg>
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        Virtual Machines (VMs)
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2v-2a2 2 0 00-2-2H5zM5 19a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2v-2a2 2 0 00-2-2H5z"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Virtual Machines</span>
                                 </div>
-                                <!-- IP Config -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a8.966 8.966 0 01-5.965-2.258m0 0A8.988 8.988 0 013 12m0 0A8.988 8.988 0 018.035 3.742m0 0A8.966 8.966 0 0112 3m0 0a8.966 8.966 0 015.965 2.258m0 0A8.988 8.988 0 0121 12z"/></svg>
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        IP Config & Remote Access
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a8.966 8.966 0 01-5.965-2.258m0 0A8.988 8.988 0 013 12m0 0A8.988 8.988 0 018.035 3.742m0 0A8.966 8.966 0 0112 3m0 0a8.966 8.966 0 015.965 2.258m0 0A8.988 8.988 0 0121 12z"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">IP Config & Remote</span>
                                 </div>
-                                <!-- Client-Server Arch -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        Client-Server Arch
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Client-Server Arch</span>
                                 </div>
                             </div>
                         </div>
@@ -295,29 +255,20 @@
                         <!-- Languages -->
                         <div>
                             <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Languages & Soft Skills</h4>
-                            <div class="flex flex-wrap gap-4">
-                                <!-- Khmer -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://flagcdn.com/kh.svg" class="w-8 h-auto rounded-[2px] shadow-sm" alt="Cambodia">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        Khmer (Native)
-                                    </span>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://flagcdn.com/kh.svg" class="w-5 h-auto rounded-[2px]" alt="Cambodia">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">Khmer (Native)</span>
                                 </div>
-                                <!-- English -->
-                                <div class="group relative flex justify-center items-center w-14 h-14 bg-slate-800/80 border border-slate-600 rounded-xl hover:bg-slate-700 hover:border-indigo-500/50 transition-all cursor-help shadow-sm">
-                                    <img src="https://flagcdn.com/gb.svg" class="w-8 h-auto rounded-[2px] shadow-sm" alt="English">
-                                    <span class="absolute -top-12 scale-0 transition-all duration-200 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white group-hover:scale-100 shadow-xl border border-slate-700 whitespace-nowrap z-20 pointer-events-none">
-                                        English (Proficient)
-                                    </span>
+                                <div class="flex items-center gap-2 px-3 py-2 bg-slate-800/80 border border-slate-600 rounded-lg hover:bg-slate-700 hover:border-indigo-500/50 transition-colors shadow-sm cursor-default">
+                                    <img src="https://flagcdn.com/gb.svg" class="w-5 h-auto rounded-[2px]" alt="English">
+                                    <span class="text-xs md:text-sm font-semibold text-slate-200">English (Proficient)</span>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-
-            </div>
-        </div>
     </section>
 
     <!-- 2. Ta Prohm Projects Section -->
