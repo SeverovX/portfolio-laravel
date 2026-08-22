@@ -656,34 +656,42 @@
         </footer>
     </div>
 
-    <!-- Floating Spotify-Style Audio Player -->
+   <!-- Floating Spotify-Style Audio Player (UPGRADED) -->
     <div class="fixed z-40 bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[320px] md:bottom-6 md:left-auto md:-translate-x-0 md:right-6 md:w-80 bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-2xl rounded-xl p-3 flex flex-col gap-2 group transition-all">
 
-        <!-- Hidden Audio Element -->
-        <audio id="bg-music" loop preload="metadata">
-            <source src="{{ asset('music/background.mp3') }}" type="audio/mpeg">
-        </audio>
+        <!-- Hidden Audio Element (Source is injected by JS) -->
+        <audio id="bg-music" preload="metadata"></audio>
 
         <div class="flex items-center gap-3">
             <!-- Album Art -->
             <div class="w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-slate-800 border border-slate-700 shadow-inner">
-                <!-- You can change this image URL later to whatever album cover you want! -->
-                <img id="album-art" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e6/9f/9b/e69f9b04-b749-da22-13cd-24c76d210d94/4550706790447_cover.png/600x600cc.webp" alt="Album Art" class="w-full h-full object-cover transition-transform duration-700">
+                <img id="album-art" src="" alt="Album Art" class="w-full h-full object-cover transition-transform duration-700">
             </div>
 
             <!-- Track Info -->
             <div class="flex-grow min-w-0">
-                <h4 class="text-slate-100 text-sm font-bold truncate">First Song by Roga.</h4>
-                <p class="text-slate-400 text-xs truncate">Now Playing</p>
+                <h4 id="track-title" class="text-slate-100 text-sm font-bold truncate">Loading...</h4>
+                <p id="track-artist" class="text-slate-400 text-xs truncate">Please wait</p>
             </div>
 
-            <!-- Play/Pause Button -->
-            <button id="play-pause-btn" class="w-9 h-9 flex items-center justify-center rounded-full bg-indigo-500 hover:bg-indigo-400 hover:scale-105 text-white transition-all shadow-md focus:outline-none flex-shrink-0">
-                <!-- Play Icon -->
-                <svg id="play-icon" class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                <!-- Pause Icon -->
-                <svg id="pause-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-            </button>
+            <!-- Player Controls -->
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <!-- Previous Button -->
+                <button id="prev-btn" class="text-slate-400 hover:text-white transition focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                </button>
+
+                <!-- Play/Pause Button -->
+                <button id="play-pause-btn" class="w-9 h-9 flex items-center justify-center rounded-full bg-indigo-500 hover:bg-indigo-400 hover:scale-105 text-white transition-all shadow-md focus:outline-none">
+                    <svg id="play-icon" class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="pause-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+
+                <!-- Next Button -->
+                <button id="next-btn" class="text-slate-400 hover:text-white transition focus:outline-none">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                </button>
+            </div>
         </div>
 
         <!-- Progress Bar -->
@@ -696,26 +704,55 @@
         </div>
     </div>
 
-    <!-- Mobile Menu Script -->
+    <!-- Script Logic -->
     <script>
+        // Mobile Menu Logic
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const links = document.querySelectorAll('.mobile-link');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        links.forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
 
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Floating Audio Player Logic
+        // Upgraded Audio Player Logic
         document.addEventListener('DOMContentLoaded', () => {
+
+            // --- YOUR PLAYLIST GOES HERE ---
+            const playlist = [
+                {
+                    title: "First Song",
+                    artist: "Roga",
+                    src: "{{ asset('music/song1.mp3') }}", // CHANGE THIS TO YOUR ACTUAL MP3 NAME
+                    cover: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e6/9f/9b/e69f9b04-b749-da22-13cd-24c76d210d94/4550706790447_cover.png/600x600cc.webp"
+                },
+                {
+                    title: "Society",
+                    artist: "pathetic240px",
+                    src: "{{ asset('music/song2.mp3') }}", // CHANGE THIS TO YOUR ACTUAL MP3 NAME
+                    cover: "https://imgs.search.brave.com/7GRgTcZ1GaRXxHT-S5crptu1IyrJMbp1KsvDoMmgN0w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS8w/bEQtYU51dkRoQS9t/YXhyZXNkZWZhdWx0/LmpwZw"
+                },
+                {
+                    title: "Mentamorphosis",
+                    artist: "Interworld",
+                    src: "{{ asset('music/song3.mp3') }}", // CHANGE THIS TO YOUR ACTUAL MP3 NAME
+                    cover: "https://upload.wikimedia.org/wikipedia/en/1/15/Metamorphosis_-_Interworld.jpg"
+                },
+                {
+                    title: "dancing nihilist",
+                    artist: "pathetic240px",
+                    src: "{{ asset('music/song4.mp3') }}",
+                    cover: "https://imgs.search.brave.com/ywxEixTJSrdU7PGtf9FgWrgNb31RPAjuKUTepNmfO6Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnNj/ZG4uY28vaW1hZ2Uv/YWI2NzYxNmQwMDAw/MWUwMmQ0MWI1ZDg3/NTkyNjA1ODgyNDM5/NjM0Nw"
+                }
+            ];
+
+            let currentTrackIndex = 0;
+            let isPlaying = false;
+
+            // DOM Elements
             const audio = document.getElementById('bg-music');
             const playBtn = document.getElementById('play-pause-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
             const playIcon = document.getElementById('play-icon');
             const pauseIcon = document.getElementById('pause-icon');
             const progressBar = document.getElementById('progress-bar');
@@ -723,8 +760,8 @@
             const currentTimeEl = document.getElementById('current-time');
             const totalTimeEl = document.getElementById('total-time');
             const albumArt = document.getElementById('album-art');
-
-            let isPlaying = false;
+            const trackTitle = document.getElementById('track-title');
+            const trackArtist = document.getElementById('track-artist');
 
             // Format time (seconds to m:ss)
             const formatTime = (time) => {
@@ -734,43 +771,76 @@
                 return `${minutes}:${seconds.toString().padStart(2, '0')}`;
             };
 
-            // Load metadata to get total song duration
-            audio.addEventListener('loadedmetadata', () => {
-                totalTimeEl.textContent = formatTime(audio.duration);
-            });
+            // Load a track into the player
+            const loadTrack = (index) => {
+                const track = playlist[index];
+                audio.src = track.src;
+                trackTitle.textContent = track.title;
+                trackArtist.textContent = track.artist;
+                albumArt.src = track.cover;
 
-            // Play/Pause toggle
-            playBtn.addEventListener('click', () => {
+                // Reset progress bar visually
+                progressBar.style.width = "0%";
+                currentTimeEl.textContent = "0:00";
+            };
+
+            // Play / Pause Logic
+            const togglePlay = () => {
                 if (isPlaying) {
                     audio.pause();
                     playIcon.classList.remove('hidden');
                     pauseIcon.classList.add('hidden');
-                    albumArt.classList.remove('scale-110'); // Remove zoom effect
+                    albumArt.classList.remove('scale-110');
                 } else {
                     audio.play();
                     playIcon.classList.add('hidden');
                     pauseIcon.classList.remove('hidden');
-                    albumArt.classList.add('scale-110'); // Add cool zoom effect when playing
+                    albumArt.classList.add('scale-110');
                 }
                 isPlaying = !isPlaying;
+            };
+
+            // Next Track Logic
+            const nextTrack = () => {
+                currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+                loadTrack(currentTrackIndex);
+                if (isPlaying) audio.play();
+            };
+
+            // Prev Track Logic
+            const prevTrack = () => {
+                currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+                loadTrack(currentTrackIndex);
+                if (isPlaying) audio.play();
+            };
+
+            // Event Listeners
+            playBtn.addEventListener('click', togglePlay);
+            nextBtn.addEventListener('click', nextTrack);
+            prevBtn.addEventListener('click', prevTrack);
+
+            // Auto-play next song when current finishes
+            audio.addEventListener('ended', nextTrack);
+
+            audio.addEventListener('loadedmetadata', () => {
+                totalTimeEl.textContent = formatTime(audio.duration);
             });
 
-            // Update progress bar as song plays
             audio.addEventListener('timeupdate', () => {
                 const progressPercent = (audio.currentTime / audio.duration) * 100;
                 progressBar.style.width = `${progressPercent}%`;
                 currentTimeEl.textContent = formatTime(audio.currentTime);
             });
 
-            // Click on the bar to skip/seek through the song
             progressContainer.addEventListener('click', (e) => {
                 const width = progressContainer.clientWidth;
                 const clickX = e.offsetX;
-                const duration = audio.duration;
-                audio.currentTime = (clickX / width) * duration;
+                audio.currentTime = (clickX / width) * audio.duration;
             });
-        });
 
+            // Initialize the first song on page load
+            loadTrack(currentTrackIndex);
+        });
     </script>
 
 </body>
