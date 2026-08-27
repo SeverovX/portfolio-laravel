@@ -13,6 +13,6 @@
     <hr>
 
     <p><strong>Message:</strong></p>
-    <p>{{ $data['message'] }}</p>
+    <p style="white-space: pre-wrap;">{{ $data['message'] }}</p>
 </body>
 </html>
